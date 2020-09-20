@@ -20,7 +20,7 @@ namespace BlogPessoal.Web.Controllers
                     .OrderBy(x => x.Nome)
                     .ToList();
 
-            return View();
+            return View(categorias);
         }
 
         public ActionResult Create()
@@ -43,17 +43,14 @@ namespace BlogPessoal.Web.Controllers
         public ActionResult Edit(int? id)
         {
             if (id == null)
-            {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
 
             var categoria = _context.CategoriaArtigo.Find(id);
 
             if (categoria == null)
-            {
                 return HttpNotFound();
-            }
-            return View();
+
+            return View(categoria);
         }
 
         [HttpPost]
@@ -67,5 +64,29 @@ namespace BlogPessoal.Web.Controllers
             }
             return View(categoria);
         }
+
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+
+            var categoria = _context.CategoriaArtigo.Find(id);
+
+            if (categoria == null)
+                return HttpNotFound();
+
+            return View(categoria);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            var categoria = _context.CategoriaArtigo.Find(id);
+            _context.CategoriaArtigo.Remove(categoria);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

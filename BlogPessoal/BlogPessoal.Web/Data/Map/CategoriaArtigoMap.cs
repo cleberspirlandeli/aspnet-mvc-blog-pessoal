@@ -16,7 +16,6 @@ namespace BlogPessoal.Web.Data.Map
 
             Property(x => x.Nome)
                 .HasColumnName("nome")
-                .IsOptional()
                 .HasMaxLength(150);
 
             Property(x => x.Descricao)
