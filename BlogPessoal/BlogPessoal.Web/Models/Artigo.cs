@@ -26,8 +26,10 @@ namespace BlogPessoal.Web.Models
         public int IdAutor { get; set; }
 
         [Required]
-        public Byte Removido { get; set; }
+        public bool Removido { get; set; }
 
+        public virtual CategoriaArtigo CategoriaArtigo { get; set; }
 
+        public virtual Autor Autor { get; set; }
     }
 }

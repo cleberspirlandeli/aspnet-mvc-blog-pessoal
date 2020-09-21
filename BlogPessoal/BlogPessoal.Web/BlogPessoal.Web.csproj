@@ -118,6 +118,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArtigoController.cs" />
+    <Compile Include="Controllers\AutorController.cs" />
     <Compile Include="Controllers\CategoriaArtigoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\Context\Context.cs" />
@@ -154,6 +156,18 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Views\CategoriaArtigo\Index.cshtml" />
     <Content Include="Views\CategoriaArtigo\Create.cshtml" />
+    <Content Include="Views\CategoriaArtigo\Edit.cshtml" />
+    <Content Include="Views\CategoriaArtigo\Delete.cshtml" />
+    <Content Include="Views\Autor\Create.cshtml" />
+    <Content Include="Views\Autor\Delete.cshtml" />
+    <Content Include="Views\Autor\Details.cshtml" />
+    <Content Include="Views\Autor\Edit.cshtml" />
+    <Content Include="Views\Autor\Index.cshtml" />
+    <Content Include="Views\Artigo\Create.cshtml" />
+    <Content Include="Views\Artigo\Delete.cshtml" />
+    <Content Include="Views\Artigo\Details.cshtml" />
+    <Content Include="Views\Artigo\Edit.cshtml" />
+    <Content Include="Views\Artigo\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

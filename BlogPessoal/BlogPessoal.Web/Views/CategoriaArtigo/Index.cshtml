@@ -4,10 +4,10 @@
 
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Sistema RZN";
 }
 
-<h2>Categoria de Artigos</h2>
+<h2>Categoria Artigo > Listar</h2>
 
 
 <div>
@@ -19,6 +19,7 @@
         <tr>
             <th>Nome</th>
             <th>Descrição</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -27,6 +28,10 @@
             <tr>
                 <td>@item.Nome</td>
                 <td>@item.Descricao</td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+                    @Html.ActionLink("Deletar", "Delete", new { id = item.Id })
+                </td>
             </tr>
         }
     </tbody>

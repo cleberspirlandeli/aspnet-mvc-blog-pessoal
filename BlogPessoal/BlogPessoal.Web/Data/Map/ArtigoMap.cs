@@ -15,7 +15,7 @@ namespace BlogPessoal.Web.Data.Map
                     .HasMaxLength(300);
 
             Property(x => x.Conteudo)
-                    .HasColumnName("email")
+                    .HasColumnName("conteudo")
                     .HasMaxLength(300);
 
             Property(x => x.DataPublicacao)
@@ -29,6 +29,16 @@ namespace BlogPessoal.Web.Data.Map
 
             Property(x => x.Removido)
                     .HasColumnName("removido");
+
+            HasRequired(t => t.CategoriaArtigo)
+                .WithMany(t => t.Artigo)
+                .HasForeignKey(t => t.IdCategoriaArtigo)
+                .WillCascadeOnDelete(false);
+
+            HasRequired(t => t.Autor)
+                .WithMany(t => t.Artigo)
+                .HasForeignKey(t => t.IdAutor)
+                .WillCascadeOnDelete(false);
         }
     }
 }

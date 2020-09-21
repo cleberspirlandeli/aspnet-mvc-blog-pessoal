@@ -20,5 +20,7 @@ namespace BlogPessoal.Web.Models
         [DataType(DataType.MultilineText, ErrorMessage = "Descrição errada")]
         [StringLength(300, MinimumLength = 3)]
         public string Descricao { get; set; }
+
+        public virtual ICollection<Artigo> Artigo { get; set; }
     }
 }
