@@ -98,6 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -120,11 +121,15 @@
     <Compile Include="Controllers\CategoriaArtigoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\Context\Context.cs" />
+    <Compile Include="Data\Map\ArtigoMap.cs" />
+    <Compile Include="Data\Map\AutorMap.cs" />
     <Compile Include="Data\Map\CategoriaArtigoMap.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Autor.cs" />
     <Compile Include="Models\CategoriaArtigo.cs" />
+    <Compile Include="Models\Artigo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +152,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\CategoriaArtigo\Index.cshtml" />
+    <Content Include="Views\CategoriaArtigo\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -156,7 +163,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\CategoriaArtigo\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
